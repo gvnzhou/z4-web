@@ -14,11 +14,18 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <!-- logo -->
     <link href='//cdn.webfont.youziku.com/webfonts/nomal/90913/37509/57ca71c7f629d81bd0583545.css' rel='stylesheet' type='text/css' />
+    <!-- 服务范围数字 -->
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/90913/46758/57cbc229f629d80ad88a300d.css' rel='stylesheet' type='text/css' />
+
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+    <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.scss">
     
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
@@ -31,40 +38,112 @@
     
     <header id="topbar" class="navbar-fixed-top">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row" id="menu">
           <div class="col-md-7 nav-header">
             <span class="header-text">Z4New</span>
           </div>
-          <div class="col-md-1 text-center nav-item">
-            <a href="" class="nav-light">首页</a>
+          <div class="col-md-1 text-center nav-item" >
+            <a href="#page1" class="active" data-menuanchor="page1">首页</a>
+          </div>
+          <div class="col-md-1 text-center nav-item" >
+            <a href="#page2" data-menuanchor="page2">服务</a>
           </div>
           <div class="col-md-1 text-center nav-item">
-            <a href="">产品</a>
+            <a href="#page3" data-menuanchor="page3">案例</a>
           </div>
           <div class="col-md-1 text-center nav-item">
-            <a href="">案例</a>
+            <a href="#page4" data-menuanchor="page4">关于</a>
           </div>
           <div class="col-md-1 text-center nav-item">
-            <a href="">关于</a>
-          </div>
-          <div class="col-md-1 text-center nav-item">
-            <a href="">联系</a>
+            <a href="#page5" data-menuanchor="page5">联系</a>
           </div>
         </div>
       </div>
     </header>
 
-    <section id="section_1">
-      <div class="intro">
-        <h1>这里是说明啊</h1>
-        <p class="line"></p>
-        <p class="intro-text">详细介绍</p>
-      </div>
-    </section>
-
-    <footer>
+    <div id="wrapper">
       
-    </footer>
+      <section id="section_1" class="section">
+        <div class="intro">
+          <h1>这里是说明啊</h1>
+          <p class="line"></p>
+          <p class="intro-text">详细介绍1</p>
+        </div>
+      </section>
+
+      <section id="section_2" class="section">
+        <div class="service">
+          <h1>服务范围</h1>
+          <p>Scope of services</p>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-3 service-item">
+                <p class="service-num">01</p>
+                <div class="icon-circle center-block">
+                  <i class="fa fa-desktop" aria-hidden="true" style="font-size: 45px;color: #FFF;margin-top: 25px;margin-bottom: 15px;"></i>
+                  <p class="">PC+移动Web</p>
+                </div>     
+                <span>PC+移动Web</span>
+                <p class="center-block service-intro">网页设计与开发对用户要求 主要有企业、商城页面设计、UI设计、后台开发</p>
+              </div>
+              <div class="col-md-3 service-item">
+                <p class="service-num">02</p>
+                <div class="icon-circle center-block">
+                  <i class="fa fa-html5" style="font-size: 50px;color: #FFF;margin-top: 25px;margin-bottom: 15px;"></i>
+                  <p>HTML5</p>
+                </div>
+                <span>HTML5</span>
+                <p class="center-block service-intro">网页设计与开发对用户要求 主要有企业、商城页面设计、UI设计、后台开发</p>
+              </div>
+              <div class="col-md-3 service-item">
+                <p class="service-num">03</p>
+                <div class="icon-circle center-block">
+                  <i class="fa fa-mobile" aria-hidden="true" style="font-size: 65px;color: #FFF;margin-top: 17px;margin-bottom: 8px;"></i>
+                  <p class="">原生APP</p>
+                </div>
+                <span>原生APP</span>
+                <p class="center-block service-intro">基于IOS、Android应用开发掌握智能终端时代</p>
+              </div>
+              <div class="col-md-3 service-item">
+                <p class="service-num">04</p>
+                <div class="icon-circle center-block">
+                  <i class="fa fa-weixin" aria-hidden="true" style="font-size: 50px;color: #FFF;margin-top: 25px;margin-bottom: 15px;"></i>
+                  <p class="">微信公众号</p>
+                </div>
+                <span>微信公众号</span>
+                <p class="center-block service-intro">基于微信API的微信开发品牌营销进入微信时代</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section_3" class="section">
+
+      </section>
+
+      <section id="section_4" class="section">
+        <div class="intro">
+          <h1>这里是说明啊</h1>
+          <p class="line"></p>
+          <p class="intro-text">详细介绍4</p>
+        </div>
+      </section>
+      <section id="section_4" class="section">
+        <div class="intro">
+          <h1>这里是说明啊</h1>
+          <p class="line"></p>
+          <p class="intro-text">详细介绍5</p>
+        </div>
+      </section>
+    
+
+      <footer>
+        
+      </footer>
+    </div>
+
+    
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -98,6 +177,7 @@
     <!-- endbuild -->
 
     <script src="/bower_components/particleground/jquery.particleground.min.js"></script>
+    <script src="/bower_components/fullpage.js/jquery.fullPage.min.js"></script>
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>

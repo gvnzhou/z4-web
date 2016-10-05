@@ -18,6 +18,8 @@
     <link href='//cdn.webfont.youziku.com/webfonts/nomal/90913/46758/57cbc229f629d80ad88a300d.css' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/jquery.fullPage.css">
+    <link rel="stylesheet" href="styles/slick.css">
+    <link rel="stylesheet" href="styles/slick-theme.css">
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -77,38 +79,34 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-3 col-xs-6">
                             <p class="service-num">01</p>
                             <div class="icon-circle center-block">
-                                <i class="fa fa-desktop" aria-hidden="true" style="font-size: 45px;color: #FFF;margin-top: 25px;margin-bottom: 15px;"></i>
-                                <p class="">PC+移动Web</p>
+                                <i class="fa fa-desktop" aria-hidden="true"></i>
                             </div>
                             <span>PC+移动Web</span>
                             <p class="center-block service-intro">网页设计与开发对用户要求 主要有企业、商城页面设计、UI设计、后台开发</p>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-3 col-xs-6">
                             <p class="service-num">02</p>
                             <div class="icon-circle center-block">
-                                <i class="fa fa-html5" style="font-size: 50px;color: #FFF;margin-top: 25px;margin-bottom: 15px;"></i>
-                                <p>HTML5</p>
+                                <i class="fa fa-html5"></i>
                             </div>
                             <span>HTML5</span>
                             <p class="center-block service-intro">网页设计与开发对用户要求 主要有企业、商城页面设计、UI设计、后台开发</p>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-3 col-xs-6">
                             <p class="service-num">03</p>
                             <div class="icon-circle center-block">
-                                <i class="fa fa-mobile" aria-hidden="true" style="font-size: 65px;color: #FFF;margin-top: 17px;margin-bottom: 8px;"></i>
-                                <p class="">原生APP</p>
+                                <i class="fa fa-mobile" aria-hidden="true"></i>
                             </div>
                             <span>原生APP</span>
                             <p class="center-block service-intro">基于IOS、Android应用开发掌握智能终端时代</p>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-3 col-xs-6">
                             <p class="service-num">04</p>
                             <div class="icon-circle center-block">
-                                <i class="fa fa-weixin" aria-hidden="true" style="font-size: 50px;color: #FFF;margin-top: 25px;margin-bottom: 15px;"></i>
-                                <p class="">微信公众号</p>
+                                <i class="fa fa-weixin" aria-hidden="true"></i>
                             </div>
                             <span>微信公众号</span>
                             <p class="center-block service-intro">基于微信API的微信开发品牌营销进入微信时代</p>
@@ -125,7 +123,47 @@
                     <p>Case show</p>
                 </div>
                 <div class="container">
-                    <div class="row">
+                    <div class="multiple-items">
+                        <div class="col-md-3">
+                            <div class="thumbnail">
+                                <img src="./images/case1.png" alt="...">
+                                <div class="caption">
+                                    <h4>合肥沃德化工厂集团</h4>
+                                    <!-- <p>www.wodechem.com</p> -->
+                                    <p>合肥沃德化工是一家专业从事农药、化肥、化工原料生产加工、贸易的化工公司。始建于2002年，经过多年的潜...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="thumbnail">
+                                <img src="./images/case2.png" alt="...">
+                                <div class="caption">
+                                    <h4>韩丽橱柜官方网站</h4>
+                                    <!-- p>www.hanex.cc</p> -->
+                                    <p>广东韩丽家居集团股份有限公司，一直以来致力于橱柜、衣柜的生产和研发，发展至今已成为中国橱柜、衣柜行业的...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="thumbnail">
+                                <img src="./images/case3.png" alt="...">
+                                <div class="caption">
+                                    <h4>上派装饰</h4>
+                                    <!-- <p>www.sopaer.com</p> -->
+                                    <p>SOPA设计，隶属于上海上派建筑设计工程有限公司。公司主要面向国内外开发商及私人客户，针对酒店、大型商...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="thumbnail">
+                                <img src="./images/case4.png" alt="...">
+                                <div class="caption">
+                                    <h4>上海纽贝滋</h4>
+                                    <!-- <p>www.newbaze.com</p> -->
+                                    <p>上海纽贝滋实业集团有限公司，是专业从事婴幼儿食品开发、生产与销售的婴幼儿用品公司。集团旗下...</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-3">
                             <div class="thumbnail">
                                 <img src="./images/case1.png" alt="...">
@@ -169,38 +207,27 @@
                     </div>
                 </div>
             </div>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                Launch demo modal
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
         <section id="section_4" class="section">
         </section>
         <section id="section_5" class="section">
-            <div class="intro">
-                <h1>这里是说明啊</h1>
-                <p class="line"></p>
-                <p class="intro-text">详细介绍5</p>
-            </div>
+            联系我们
         </section>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./images/case4.png" alt="...">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -240,6 +267,7 @@
     <!-- endbuild -->
     <script src="/bower_components/particleground/jquery.particleground.min.js"></script>
     <script src="/bower_components/fullpage.js/jquery.fullPage.min.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

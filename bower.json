@@ -6,7 +6,8 @@
     "modernizr": "~2.8.1",
     "fullpage.js": "fullpage#^2.8.6",
     "font-awesome": "^4.6.3",
-    "particleground": "*"
+    "particleground": "*",
+    "slick-carousel": "^1.6.0"
   },
   "overrides": {
     "bootstrap-sass": {

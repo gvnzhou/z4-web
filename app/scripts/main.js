@@ -46,8 +46,22 @@ $(function($) {
                         'left': 'calc(50% - 60px)',
                         'opacity': '1'
                     });
+                    $('#section_3 .container').css({
+                        'opacity': '1'
+                    });
                     break;
                 case 4:
+                    $('#section_4 .section-title h1').css({
+                        'right': 'calc(50% - 100px)',
+                        'opacity': '1'
+                    });
+                    $('#section_4 .section-title p').css({
+                        'left': 'calc(50% - 60px)',
+                        'opacity': '1'
+                    });
+                    $('#section_4 .container').css({
+                        'opacity': '1'
+                    });
                     break;
                 case 5:
                     break;
@@ -85,8 +99,22 @@ $(function($) {
                         'left': '0',
                         'opacity': '0.1'
                     });
+                    $('#section_3 .container').css({
+                        'opacity': '0.1'
+                    });
                     break;
                 case 4:
+                    $('#section_4 .section-title h1').css({
+                        'right': '0',
+                        'opacity': '0.1'
+                    });
+                    $('#section_4 .section-title p').css({
+                        'left': '0',
+                        'opacity': '0.1'
+                    });
+                    $('#section_4 .container').css({
+                        'opacity': '0.1'
+                    });
                     break;
                 case 5:
                     break;

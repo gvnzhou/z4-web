@@ -101,21 +101,92 @@ $(function($) {
         dots: true,
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 2
     });
 
-    document.querySelector('#section_3 .multiple-items').addEventListener('click', function(e) {
-        if (e.target.className.indexOf('col-md-3') > -1) {
-            console.log(313123123)
+
+
+    $('#section_3 .multiple-items').on('click', function(e) {
+
+        var _e = e.target;
+        do {
+            if (_e.className.indexOf('thumbnail') > -1) {
+                createModal(_e);
+            }
+            _e = _e.parentNode;
+        } while (_e.tagName === "DIV")
+
+    });
+
+
+    // 模态框
+    function createModal(elm) {
+        createMask();
+        $(".popup-header i").on('click', function(e) {
+            $('.popup').remove();
+            $('#mask').remove();
+        });
+
+        var data = {
+            'title': $(elm).find('h4').text(),
+            'img': $(elm).find('img').attr('src')
         }
-    })
 
-    // $('#section_3 .multiple-items').bind('click', function(e) {
-    //     if (e.target.className.indexOf('col-md-3') > -1) {
-    //         console.log(313123123)
-    //     }
+        renderPopup(data);
 
-    // });
+    }
 
+    // 创建遮罩层函数
+    function createMask(data) {
+        var maskDiv = $('<div id="mask"></div>');
+        $('body').append(maskDiv);
+
+        var contentDiv = $('<div class="popup"><div class="popup-header"><h4 class="text-center"></h4><i class="fa fa-times" aria-hidden="true"></i></div><div class="popup-content"></div></div>');
+        $('body').append(contentDiv);
+    }
+
+    // 渲染数据
+    function renderPopup(data) {
+        $('.popup-header h4').text(data.title);
+        $('.popup-content').append('<img src=' + data.img + '>');
+
+    }
+
+    window.onresize = function() {
+
+        if ($(window).width() < 992) {
+            $('.multiple-items').slick('unslick');
+
+            $('.multiple-items').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1
+            });
+        }
+
+        if ($(window).width() < 768) {
+            $('.multiple-items').slick('unslick');
+
+            $('.multiple-items').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+            });
+        }
+
+        if ($(window).width() > 992) {
+            $('.multiple-items').slick('unslick');
+
+            $('.multiple-items').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 2
+            });
+        }
+    }
 
 });

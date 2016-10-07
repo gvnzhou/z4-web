@@ -14,6 +14,8 @@ $icon-font-path: '../fonts/';
 
 $bgc_1:#08080A;
 $z4-active-bgcolor:#FFD646;
+$z4-color-white:#FFFFFF;
+$z4-color-black:#000000;
 $b_1:#161616;
 $c_1:#999999;
 
@@ -395,6 +397,54 @@ body {
     #section_5 {
         background-size: cover;
         background-image: url(../images/page5.jpg);
+    }
+}
+
+
+/* popup */
+
+#mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #999;
+    z-index: 1050;
+    opacity: 0.3;
+}
+
+.popup {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    margin-left: -400px;
+    width: 800px;
+    height: 800px;
+    background-color: #08080A;
+    z-index: 1060;
+    .popup-header {
+        position: relative;
+        width: 100%;
+        background-color: $z4-color-black;
+        h4 {
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            line-height: 40px;
+        }
+        i {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 22px;
+            background-color: $z4-color-black;
+            cursor: pointer;
+        }
+    }
+    .popup-content {
+        padding-top: 20px;
+        text-align: center;
     }
 }
 

@@ -21,7 +21,8 @@ $(function($) {
                         'opacity': '1'
                     })
                     $('#section_1 .intro-text').css({
-                        'margin-top': '20px'
+                        'margin-top': '20px',
+                        'opacity': '1'
                     })
                     break;
                 case 2:
@@ -59,7 +60,10 @@ $(function($) {
                         'left': 'calc(50% - 60px)',
                         'opacity': '1'
                     });
-                    $('#section_4 .container').css({
+                    $('#section_4 .team-title').css({
+                        'transform': 'scale(1, 1)'
+                    });
+                    $('#section_4 .team-intro').css({
                         'opacity': '1'
                     });
                     break;
@@ -74,7 +78,9 @@ $(function($) {
                         'opacity': '0.1'
                     })
                     $('#section_1 .intro-text').css({
-                        'margin-top': '800px'
+                        'margin-top': '800px',
+                        'opacity': '0'
+
                     })
                     break;
                 case 2:
@@ -112,7 +118,10 @@ $(function($) {
                         'left': '0',
                         'opacity': '0.1'
                     });
-                    $('#section_4 .container').css({
+                    $('#section_4 .team-title').css({
+                        'transform': 'scale(0, 0)'
+                    });
+                    $('#section_4 .team-intro').css({
                         'opacity': '0.1'
                     });
                     break;
@@ -134,23 +143,24 @@ $(function($) {
 
 
 
-    $('#section_3 .multiple-items').on('click', function(e) {
+    // $('#section_3 .multiple-items').on('click', function(e) {
 
-        var _e = e.target;
-        do {
-            if (_e.className.indexOf('thumbnail') > -1) {
-                createModal(_e);
-            }
-            _e = _e.parentNode;
-        } while (_e.tagName === "DIV")
+            //     var _e = e.target;
+            //     do {
+            //         if (_e.className.indexOf('thumbnail') > -1) {
+            //             createModal(_e);
+            //         }
+            //         _e = _e.parentNode;
+            //     } while (_e.tagName === 'DIV')
 
-    });
+            // });
+
 
 
     // 模态框
     function createModal(elm) {
         createMask();
-        $(".popup-header i").on('click', function(e) {
+        $('.popup-header i').on('click', function(e) {
             $('.popup').remove();
             $('#mask').remove();
         });
@@ -180,7 +190,7 @@ $(function($) {
 
     }
 
-    window.onresize = function() {
+    window.onresize = window.onload = function() {
 
         if ($(window).width() < 992) {
             $('.multiple-items').slick('unslick');

@@ -141,24 +141,38 @@ $(function($) {
         slidesToScroll: 2
     });
 
+    $('#section_3 .multiple-items').on('click', function(e) {
 
+        var _e = e.target;
+        do {
+            if (_e.className.indexOf('thumbnail') > -1) {
+                createModal(_e);
+            }
+            _e = _e.parentNode;
+        } while (_e.tagName === 'DIV')
 
-    // $('#section_3 .multiple-items').on('click', function(e) {
-
-            //     var _e = e.target;
-            //     do {
-            //         if (_e.className.indexOf('thumbnail') > -1) {
-            //             createModal(_e);
-            //         }
-            //         _e = _e.parentNode;
-            //     } while (_e.tagName === 'DIV')
-
-            // });
+    });
 
 
 
     // 模态框
     function createModal(elm) {
+        // 创建遮罩层函数
+        function createMask(data) {
+            var maskDiv = $('<div id="mask"></div>');
+            $('body').append(maskDiv);
+
+            var contentDiv = $('<div class="popup"><div class="popup-header"><h4 class="text-center"></h4><i class="fa fa-times" aria-hidden="true"></i></div><div class="popup-content"></div></div>');
+            $('body').append(contentDiv);
+        }
+
+        // 渲染数据
+        function renderPopup(data) {
+            $('.popup-header h4').text(data.title);
+            $('.popup-content').append('<img src=' + data.img + '>');
+
+        }
+
         createMask();
         $('.popup-header i').on('click', function(e) {
             $('.popup').remove();
@@ -174,21 +188,12 @@ $(function($) {
 
     }
 
-    // 创建遮罩层函数
-    function createMask(data) {
-        var maskDiv = $('<div id="mask"></div>');
-        $('body').append(maskDiv);
 
-        var contentDiv = $('<div class="popup"><div class="popup-header"><h4 class="text-center"></h4><i class="fa fa-times" aria-hidden="true"></i></div><div class="popup-content"></div></div>');
-        $('body').append(contentDiv);
-    }
 
-    // 渲染数据
-    function renderPopup(data) {
-        $('.popup-header h4').text(data.title);
-        $('.popup-content').append('<img src=' + data.img + '>');
 
-    }
+
+
+
 
     window.onresize = window.onload = function() {
 

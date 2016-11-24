@@ -137,8 +137,9 @@ $(function($) {
     $('.multiple-items').slick({
         dots: true,
         infinite: true,
+        fade: true,
         slidesToShow: 4,
-        slidesToScroll: 2
+        slidesToScroll: 1
     });
 
     $('#section_3 .multiple-items').on('click', function(e) {
@@ -146,6 +147,8 @@ $(function($) {
         var _e = e.target;
         do {
             if (_e.className.indexOf('thumbnail') > -1) {
+                $.fn.fullpage.setKeyboardScrolling(false);
+                $.fn.fullpage.setAllowScrolling(false);
                 createModal(_e);
             }
             _e = _e.parentNode;
@@ -169,7 +172,7 @@ $(function($) {
         // 渲染数据
         function renderPopup(data) {
             $('.popup-header h4').text(data.title);
-            $('.popup-content').append('<img src=' + data.img + '>');
+            $('.popup-content').append('<img src=' + data.img.split('_')[0] + '.png>');
 
         }
 
@@ -177,6 +180,8 @@ $(function($) {
         $('.popup-header i').on('click', function(e) {
             $('.popup').remove();
             $('#mask').remove();
+            $.fn.fullpage.setKeyboardScrolling(true);
+            $.fn.fullpage.setAllowScrolling(true);
         });
 
         var data = {

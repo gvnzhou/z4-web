@@ -366,7 +366,9 @@ body {
                     margin: 0;
                     padding: 0;
                     border: 0;
+                    overflow: hidden;
                     img {
+                        height: 220px;
                         font-size: 0;
                     }
                     .caption {
@@ -521,8 +523,8 @@ body {
     position: fixed;
     top: 50px;
     left: 50%;
-    margin-left: -400px;
-    width: 800px;
+    margin-left: -40%;
+    width: 80%;
     height: 800px;
     background-color: #08080A;
     z-index: 1060;
@@ -530,6 +532,7 @@ body {
         position: relative;
         width: 100%;
         background-color: $z4-color-black;
+        border-bottom: 1px solid #333;
         h4 {
             margin: 0;
             padding: 0;
@@ -547,9 +550,24 @@ body {
         }
     }
     .popup-content {
-        padding-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 760px;
         text-align: center;
+        overflow-y: auto;
+        text-align: center;
+        &::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+        img {
+            width: 98%;
+        }
     }
+    .popup-content {}
 }
 
 
